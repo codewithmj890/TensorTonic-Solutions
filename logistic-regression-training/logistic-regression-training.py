@@ -24,4 +24,9 @@ X = [[0],[1],[2],[3]]
 y = [0,0,1,1]
 w,b = train_logistic_regression(X, y, lr=0.1, steps=100)
 
+X_arr = np.array(X, dtype=float)
+preds = (_sigmoid(X_arr @ w + b) >= 0.5).astype(int)
+print(preds)        
+print("Accuracy:", (preds == y).mean()) 
+
 
