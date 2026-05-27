@@ -5,9 +5,8 @@ def matrix_transpose(A) -> np.ndarray:
     N, M = A.shape
     result = np.empty((M, N), dtype=A.dtype)
     
-    rows = np.arange(N).reshape(1, N)  # shape (1, N)
-    cols = np.arange(M).reshape(M, 1)  # shape (M, 1)
-    
-    result[cols, rows] = A[rows, cols]  # broadcasting → (M, N)
+    for i in range(N):
+        for j in range(M):
+            result[j][i] = A[i][j]
     
     return result
