@@ -34,6 +34,20 @@ def generate_anchors(feature_size, image_size, scales, aspect_ratios):
 # Test 1 — Single cell, single anchor
 generate_anchors(1, 8, [4], [1.0])
 
-
 # Test 2 — 2x2 grid, single scale/ratio
 generate_anchors(2, 8, [2], [1.0])
+
+# Test 3 — 3x3 grid, 2 scales, 2 ratios → 3*3*2*2 = 36 anchors
+generate_anchors(3, 320, [32, 64], [0.5, 1.0])
+
+# Test 4 — multiple aspect ratios
+generate_anchors(2, 16, [4], [0.5, 1.0, 2.0])
+
+# Test 5 — feature_size = image_size (stride=1)
+generate_anchors(8, 8, [1], [1.0])
+
+# Test 6 — large scale (anchors go outside image bounds, that's okay)
+generate_anchors(1, 16, [32], [1.0])
+
+# Test 7 — full SSD-like config
+generate_anchors(3, 320, [32, 64, 128, 192], [0.5, 1.0, 2.0])
