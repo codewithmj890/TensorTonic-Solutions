@@ -4,8 +4,8 @@ def mean_average_precision(y_true_list, y_score_list, k=None):
     ap_list = []
     
     for y_true, y_score in zip(y_true_list, y_score_list):
-        y_true = np.asarray(y_true)
-        y_score = np.asarray(y_score)
+        y_true = np.asarray(y_true, dtype=np.float64)
+        y_score = np.asarray(y_score, dtype=np.float64)
         
         sorted_idx = np.argsort(y_score)[::-1]
         
