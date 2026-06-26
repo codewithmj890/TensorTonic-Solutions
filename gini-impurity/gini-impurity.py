@@ -1,8 +1,8 @@
 import numpy as np
 
 def gini_impurity(y_left, y_right):
-    y_left  = np.asarray(y_left)
-    y_right = np.asarray(y_right)
+    y_left  = np.asarray(y_left, dtype=np.float64)
+    y_right = np.asarray(y_right, dtype=np.float64)
 
     def node_gini(y):
         n = len(y)
