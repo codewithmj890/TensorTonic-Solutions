@@ -200,6 +200,7 @@ $$
 - Varies from sample to sample
 
 The sample mean estimates the expected value:
+
 $$
 E[\bar{X}] = \mu
 $$
@@ -209,26 +210,31 @@ $$
 ## Expected Value of Common Distributions
 
 **Bernoulli$(p)$:**
+
 $$
 E[X] = p
 $$
 
 **Binomial$(n, p)$:**
+
 $$
 E[X] = np
 $$
 
 **Geometric$(p)$:**
+
 $$
 E[X] = \frac{1}{p}
 $$
 
 **Poisson$(\lambda)$:**
+
 $$
 E[X] = \lambda
 $$
 
 **Uniform (discrete) on $\{1, 2, ..., n\}$:**
+
 $$
 E[X] = \frac{n + 1}{2}
 $$
@@ -294,6 +300,7 @@ $$
 Some distributions have undefined expected values:
 
 **Cauchy distribution:**
+
 $$
 E[X] = \int_{-\infty}^{\infty} x \cdot \frac{1}{\pi(1 + x^2)} dx
 $$
